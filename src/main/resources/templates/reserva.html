@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reservar vuelo</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+<h1>Reservar vuelo</h1>
+
+<div class="container">
+    <div class="left-panel">
+        <fieldset>
+            <legend>Reservar</legend>
+
+            <div class="form-section">
+
+                <label for="dni">DNI:</label>
+                <input type="text" id="dni" />
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" />
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" />
+
+                <button type="button" onclick="cargarDatos()">Cargar datos</button>
+            </div>
+
+            <div class="form-section">
+
+                <label for="total">Total:</label>
+                <div id="total">$0.00</div>
+
+                <label for="nroTarjeta">Nro tarjeta:</label>
+                <input type="text" id="nroTarjeta" />
+
+                <label for="tipoTarjeta">Tipo:</label>
+                <select id="tipoTarjeta">
+                    <option>--</option>
+                    <option>Crédito</option>
+                    <option>Débito</option>
+                </select>
+
+                <button type="button" onclick="pagar()">Pagar</button>
+            </div>
+        </fieldset>
+    </div>
+
+    <div class="right-panel">
+        <h3>Tu vuelo</h3>
+        <div id="infoVuelo"></div>
+        <button type="button" onclick="volverABuscar()">Volver a buscar vuelos</button>
+    </div>
+</div>
+
+<script th:src="@{/js/config.js}"></script>
+<script th:src="@{/js/reserva.js}"></script>
+<script th:src="@{/js/usuarioPago.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+
+</body>
+</html>

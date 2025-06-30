@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Buscador de Vuelos</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+
+<h1>Buscar vuelos</h1>
+
+<div class="container">
+    <div class="left-panel">
+        <h3>Destino:</h3>
+        <div class="form-section">
+            <select id="destino">
+                <option>--</option>
+            </select>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha">
+
+            <label for="aeropuerto">Aeropuerto:</label>
+            <select id="aeropuerto">
+                <option>--</option>
+            </select>
+
+            <label for="aerolinea">Aerolínea:</label>
+            <select id="aerolinea">
+                <option>--</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="right-panel">
+        <h3>Tu vuelo</h3>
+        <div id="infoVuelo">
+            <p>No ha hecho consultas.</p>
+        </div>
+        <button type="button" onclick="reservarVuelo()">Reservar</button>
+    </div>
+</div>
+
+<script th:src="@{/js/config.js}"></script>
+<script th:src="@{/js/cargaDatos.js}"></script>
+<script th:src="@{/js/vuelo.js}"></script>
+<script th:src="@{/js/usuarioPago.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+
+</body>
+</html>
