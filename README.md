@@ -73,6 +73,8 @@ com.example.venta_pasajes.VentaPasajesApplication
 ---
 
 ## Autora
-*Jazmín Ayelén Aliaga*
+*Jazmín Aliaga*
+
 📧 jazmin.aliaga95@gmail.com
+
 🌐 https://www.linkedin.com/in/jazmin-aliaga/
